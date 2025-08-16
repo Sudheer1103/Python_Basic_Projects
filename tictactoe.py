@@ -1,8 +1,12 @@
 import random
 def print_board(board):
-    for row in board:
-        print("|".join(row))
-        print("-"*5)
+    print("\n    0   1   2")
+    for i, row in enumerate(board):
+        row_str = " | ".join(row)
+        print(f" {i}  {row_str}")
+        if i < 2:
+            print("   " + "-" * 9)
+    print()
 
 def check_win(board,player):
     
